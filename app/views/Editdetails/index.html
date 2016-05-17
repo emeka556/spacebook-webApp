@@ -1,0 +1,41 @@
+#{extends 'main.html' /}
+#{set title:'Edit details to Spacebook' /}
+
+<h2 class="ui blue header"> Please Edit the Users Detail</h2>
+
+  
+<section class="ui form segment">
+	<form action="/changeDetails" method="POST">
+	  <div class="two fields">
+	    <div class="field">
+	      <label>First Name</label>
+	      <input placeholder="First Name" type="text" name="firstName">
+	    </div>
+	    <div class="field">
+	      <label>Last Name</label>
+	      <input placeholder="Last Name" type="text" name="lastName">
+	    </div>
+	  </div> 
+	  <div class="field">
+	      <label>Nationality</label>
+	      <input placeholder="Nationality" type="text" name="nationality">
+	    </div>
+	  
+	  <div class="field">
+	      <label>Age</label>
+	      <input placeholder="Age" type="text" name="age">
+	    </div>
+	      
+    <div class="field">
+	    <label>Email</label>
+	    <input placeholder="Email" type="text" name="email">
+	  </div>
+	  <div class="field">
+	    <label>Password</label>
+	    <input type="password" name="password">
+	  </div>
+	  <button class="ui blue submit button">Edit Details</button>
+	</form>
+	 <i class="right triangle icon"></i>
+	<a href="/home">Return Home </a>
+</section>  

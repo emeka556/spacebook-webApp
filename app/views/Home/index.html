@@ -1,0 +1,58 @@
+#{extends 'main.html' /}
+#{set title:'Home' /}
+
+<nav class="ui menu"> 
+  <a class="ui active item" href="/home">Home</a>      
+  <a class="ui item" href="/members">Members</a>   
+  <a class="ui item" href="/profile">Profile</a>   
+  <a class="ui item" href="/login">Logout</a>      
+</nav>
+
+<section class="ui segment">
+  <h2 class="ui header">SpaceBook: Home page for ${user.firstName} ${user.lastName}</h2>
+  <h2 class="ui small header">Age: ${user.age}</h2>
+  <h2 class="ui small header">Nationality: ${user.nationality}</h2>
+  <div class="ui two column grid segment">
+    <div class="ui row">
+      <div class="ui column">
+         <h2><i class="user icon"></i>Friends (${user.friendships.size()})</h2>
+        <div class="ui list">
+          #{list items:user.friendships, as:'friendship'}
+            <div class="ui column">
+              <i class="right triangle icon" ></i>
+              <img class="ui avatar image" 
+ 							src="/profile/getpicture/${friendship.targetUser.id}" >
+              
+              
+              
+              
+ 							
+                <a href="/publicprofile/${friendship.targetUser.id}"> ${friendship.targetUser.firstName} ${friendship.targetUser.lastName}</a>
+                (<a href="/home/drop/${friendship.targetUser.id}"> drop </a>)
+              <div class="ui list">
+              </div>
+            </div>
+          #{/list}
+        </div>
+      </div>
+      <div class="ui column">
+        <h2> 
+ 					<i class="mail icon"></i>Messages (${user.inbox.size()}) 
+				</h2> 
+ 				<table class="ui table inverted segment">
+ 				 
+           			
+ 					#{list items:user.inbox, as:'message'} 
+ 					
+ 					
+ 					<tr> 
+ 						<td>${message.messageText}</td> 
+ 						<td><a href="/publicprofile/${message.from.id}">${message.from.firstName} 
+ 								${message.from.lastName}</a></td> 
+ 						<td><img class="ui avatar image" 
+ 							src="/profile/getpicture/${message.from.id}"></td> 
+ 					</tr> 
+ 					#{/list} 
+ 				</table> 
+
+</section>
