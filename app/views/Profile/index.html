@@ -1,17 +1,18 @@
 #{extends 'main.html' /}
 #{set title:'Profile' /}
 
-<nav class="ui menu"> 
-  <a class="ui item" href="/home">Home</a>      
-  <a class="ui item" href="/members">Members</a>   
-  <a class="ui active item" href="/profile">Profile</a>   
-  <a class="ui item" href="/login">Logout</a>      
+<nav class="ui blue menu"> 
+  <a class="ui item" href="/home"> <i class="home blue icon"></i> Home</a>      
+   <a class="ui item" href="/members"> <i class="add user blue icon"></i>Members</a>  
+  <a class="ui active item" href="/profile"> <i class="user blue icon"></i> Profile</a> 
+  <a class="ui item" href="/leaderboard"><i class="bar chart blue icon"></i>Leaderboard</a>  
+ <a class="ui item" href="/login">  <i class="sign out blue icon"></i> Logout</a>       
 </nav>
 
 <section class="ui segment">
-  <h2 class="ui header">${user.firstName}'s Profile</h2>
-  <h2 class="ui small header">Age: ${user.age}</h2>
-  <h2 class="ui small header">Nationality: ${user.nationality}</h2>
+  <h2 class="ui blue header">${user.firstName}'s Profile</h2>
+  <h2 class="ui blue small header">Age: ${user.age}</h2>
+  <h2 class="ui blue small header">Nationality: ${user.nationality}</h2>
          
             <div class="item">
               <i class="right triangle icon"></i>
@@ -47,6 +48,7 @@
           <input class="ui blue button" type="submit" name="submit" value="Change" />
         </form>
       </div>
+      
     </div>
   </div>
 </section>

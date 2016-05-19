@@ -1,14 +1,15 @@
 #{extends 'main.html' /}
 #{set title:'Spacebook' /}
 
-<nav class="ui menu"> 
+<nav class="ui blue menu"> 
  	<a class="ui active item" href="/home">Back to Home</a> 
  </nav> 
  
 
  <section class="ui raised  segment"> 
- 	<div class="ui small header">${user.firstName} ${user.lastName}'s 
+ 	<div class="ui blue large header">${user.firstName} ${user.lastName}'s 
 		Profile</div> 
+		<h2 class="ui blue small header">Nationality: ${user.nationality}</h2>
  	<section class="ui two column grid segment"> 
  		<div class="row"> 
  			<div class="column"> 
@@ -16,7 +17,7 @@
  					<div class="ui ribbon label">${user.firstName}'s Avatar</div> 
  					<img class="ui avatar image" >
  					<img src="/profile/getpicture/${user.id}" /> 
- 					<div class="ui ribbon label">${user.firstName}'s Status :   ${user.statusText}   </div> 
+ 					<div class="ui ribbon medium label">${user.firstName}'s Status :   ${user.statusText}   </div> 
  					
  				</div> 
  				

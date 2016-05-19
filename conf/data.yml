@@ -1,25 +1,311 @@
 User(homer):
     firstName: Homer
     lastName: Simpson
+    age: 50
+    nationality: American
     email: homer@simpson.com
     password: secret
+    statusText: 'dohhhhhh'
+    
 
 User(marge):
     firstName: Marge
     lastName: Simpson
+    age: 45
+    nationality: American
     email: marge@simpson.com
     password: secret
-    
-User(bart):
-    firstName: Bart
-    lastName: Simpson
-    email: bart@simpson.com
-    password: secret
+    statusText: 'Beautiful day out!!!'
     
 User(lisa):
     firstName: Lisa
     lastName: Simpson
+    age: 15
+    nationality: American
     email: lisa@simpson.com
     password: secret
-  
+    statusText: 'Great!!!'
+
+User(bart):
+    firstName: Bart
+    lastName: Simpson
+    age: 12
+    nationality: American
+    email: bart@simpson.com
+    password: secret
+    statusText: 'Amazing!!'
+
+User(maggie):
+    firstName: Maggie
+    lastName: Simpson
+    age: 2
+    nationality: American
+    email: maggie@simpson.com
+    password: secret 
+    
+User(ned):
+    firstName: Ned
+    lastName: Flanders
+    age: 48
+    nationality: American
+    email: ned@flanders.com
+    password: secret 
+    statusText: 'SpringField is happy place!!'
+      
+      
+Friendship(friend1):
+    sourceUser: homer
+    targetUser: marge
+
+Friendship(friend2):
+    sourceUser: homer
+    targetUser: lisa    
+
+Friendship(friend3):
+    sourceUser: homer
+    targetUser: bart 
+    
+Friendship(friend4):
+    sourceUser: homer
+    targetUser: ned 
+
+Friendship(friend5):
+    sourceUser: homer
+    targetUser: maggie 
+    
+Friendship(friend6):
+    sourceUser: marge
+    targetUser: homer
+
+Friendship(friend7):
+    sourceUser: marge
+    targetUser: lisa
+
+Friendship(friend8):
+    sourceUser: marge
+    targetUser: bart
+    
+Friendship(friend9):
+    sourceUser: marge
+    targetUser: ned
+
+Friendship(friend10):
+    sourceUser: marge
+    targetUser: maggie
+    
+Friendship(friend11):
+    sourceUser: ned
+    targetUser: homer
+
+Friendship(friend12):
+    sourceUser: ned
+    targetUser: lisa
+
+Friendship(friend13):
+    sourceUser: ned
+    targetUser: bart
+    
+Friendship(friend14):
+    sourceUser: ned
+    targetUser: marge
+
+Friendship(friend15):
+    sourceUser: ned
+    targetUser: maggie
+    
+Friendship(friend16):
+    sourceUser: lisa
+    targetUser: homer
+
+Friendship(friend17):
+    sourceUser: lisa
+    targetUser: ned
+
+Friendship(friend18):
+    sourceUser: lisa
+    targetUser: bart
+    
+Friendship(friend19):
+    sourceUser: lisa
+    targetUser: marge
+
+Friendship(friend20):
+    sourceUser: lisa
+    targetUser: maggie
+    
+Friendship(friend21):
+    sourceUser: bart
+    targetUser: homer
+
+Friendship(friend22):
+    sourceUser: bart
+    targetUser: ned
+
+Friendship(friend23):
+    sourceUser: bart
+    targetUser: lisa
+    
+Friendship(friend24):
+    sourceUser: bart
+    targetUser: marge
+
+Friendship(friend25):
+    sourceUser: bart
+    targetUser: maggie
+    
+Message(message1):
+    from : marge
+    to   : homer
+    messageText: 'how are things going?'
+    dateMessage: '2016-05-01'
+
+Message(message2):
+    from : lisa
+    to   : homer
+    messageText: 'Get me outta here!'
+    dateMessage: '2016-05-06'
+
+Message(message3):
+    from : bart
+    to   : homer
+    messageText: 'Dad hurry up, i am going to be late for school'
+    dateMessage: '2016-05-03'
+
+Message(message4):
+    from : ned
+    to   : homer
+    messageText: 'Hey Homey, lets go to the pub'
+    dateMessage: '2016-05-02'
+    
+Message(message5): 
+    from: lisa 
+    to: homer 
+    messageText: Why are you not at work? 
+    dateMessage: '2016-05-02'
+    
+Message(message6): 
+    from: homer 
+    to:   ned 
+    messageText: 'Okay i am ready lets go to the Pub'
+    dateMessage: '2016-05-02'
+    
+Message(message7): 
+    from: marge 
+    to:   ned 
+    messageText: 'Ned, where is Homey'
+    dateMessage: '2016-05-07'
+    
+Message(message8): 
+    from: homer 
+    to:   marge
+    messageText: 'Wifey, whats cooking for dinner'
+    dateMessage: '2016-05-08'
+    
+Message(message9): 
+    from: homer 
+    to:   marge
+    messageText: 'Dohhhh'
+    dateMessage: '2016-05-08'
+    
+Message(message10): 
+    from: lisa 
+    to:   marge
+    messageText: 'Mummy, where is the kitchen towel'
+    dateMessage: '2016-05-09'
+    
+Message(message11): 
+    from: bart
+    to:   marge
+    messageText: 'I need books for school'
+    dateMessage: '2016-05-10'
+    
+Message(message12): 
+    from: ned 
+    to:   marge
+    messageText: 'Marge, Homer is in the toilet'
+    dateMessage: '2016-05-10'
+    
+Message(message13): 
+    from: lisa 
+    to:   marge
+    messageText: 'I need to play with maggie'
+    dateMessage: '2016-05-11'
+    
+Message(message14): 
+    from: marge 
+    to:   bart
+    messageText: 'I will ask dad to get you the book you need'
+    dateMessage: '2016-05-11'
+    
+Message(message15): 
+    from: lisa 
+    to:   bart
+    messageText: 'Dont, be naugthty Bart grhhhhhh!'
+    ateMessage: '2016-05-12'
+    
+Message(message16): 
+    from: homer 
+    to:   bart
+    messageText: 'Did you see my tie'
+    dateMessage: '2016-05-11'
+    
+Message(message17): 
+    from: marge 
+    to:   lisa
+    messageText: 'Okay play with Maggie'
+    dateMessage: '2016-05-12'
+    
+Message(message18): 
+    from: bart 
+    to:   lisa
+    messageText: 'Please dont tell Mum on me!'
+    dateMessage: '2016-05-12'
+
+Message(message19): 
+    from: homer 
+    to:   lisa
+    messageText: 'Son why are you not in school?'
+    dateMessage: '2016-05-12'
+    
+Message(message20): 
+    from: marge 
+    to:   lisa
+    messageText: 'Go get dad'
+    dateMessage: '2016-05-12'
+    
+Message(message21): 
+    from: bart 
+    to:   lisa
+    messageText: 'I will get Milhouse to play with us'
+    dateMessage: '2016-05-13'
+
+Message(message22): 
+    from: homer 
+    to:   lisa
+    messageText: 'Hey Lisa is your Mum in the kitchen'
+    dateMessage: '2016-05-13'
+    
+Message(message23): 
+    from: marge 
+    to:   lisa
+    messageText: 'Good Girl'
+    dateMessage: '2016-05-14'
+    
+Message(message24): 
+    from: bart 
+    to:   lisa
+    messageText: 'Please dont tell Dad on me!'
+    dateMessage: '2016-05-15'
+
+Message(message25): 
+    from: homer 
+    to:   lisa
+    messageText: 'Your Teacher said you where good today'
+    dateMessage: '2016-05-16'
+
+
+    
+
+    
  
+    

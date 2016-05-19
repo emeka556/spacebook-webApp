@@ -1,17 +1,19 @@
 #{extends 'main.html' /}
 #{set title:'Home' /}
 
-<nav class="ui menu"> 
-  <a class="ui active item" href="/home">Home</a>      
-  <a class="ui item" href="/members">Members</a>   
-  <a class="ui item" href="/profile">Profile</a>   
-  <a class="ui item" href="/login">Logout</a>      
+<nav class="ui blue menu"> 
+  <a class="ui active item" href="/home"><i class="home icon"></i>Home</a>      
+  <a class="ui item" href="/members"> <i class="add user blue icon"></i>Members</a>   
+  <a class="ui item" href="/profile"> <i class="user blue icon"></i> Profile</a> 
+  <a class="ui item" href="/leaderboard"> <i class="bar chart blue icon"></i>Leaderboard</a>   
+  <a class="ui item" href="/login">  <i class="sign out blue icon"></i> Logout</a> 
+      
 </nav>
 
-<section class="ui segment">
-  <h2 class="ui header">SpaceBook: Home page for ${user.firstName} ${user.lastName}</h2>
-  <h2 class="ui small header">Age: ${user.age}</h2>
-  <h2 class="ui small header">Nationality: ${user.nationality}</h2>
+<section class="ui blue segment">
+  <h2 class="ui blue header">SpaceBook: Home page for ${user.firstName} ${user.lastName}</h2>
+  <h2 class="ui blue small header">Age: ${user.age}</h2>
+  <h2 class="ui blue small header">Nationality: ${user.nationality}</h2>
   <div class="ui two column grid segment">
     <div class="ui row">
       <div class="ui column">
@@ -39,20 +41,73 @@
         <h2> 
  					<i class="mail icon"></i>Messages (${user.inbox.size()}) 
 				</h2> 
- 				<table class="ui table inverted segment">
+ 				<table class="ui table blue inverted segment">
  				 
-           			
+           			<thread>
+           			<th> <i class= "user icon"></i>Sender</th>
+           			<th> <i class= "mail icon"></i> Message</th>
+ 					
+ 					<th> <i class= "clock icon"></i>Date</th>
+ 					<th> </th>
+ 					</thread>
+ 					</tr>
  					#{list items:user.inbox, as:'message'} 
  					
  					
  					<tr> 
+ 					<td> <img class="ui avatar image" 
+ 							src="/profile/getpicture/${message.from.id}"> <a href="/publicprofile/${message.from.id}">${message.from.firstName} 
+ 								${message.from.lastName}</a> 
+ 						 </td>
  						<td>${message.messageText}</td> 
- 						<td><a href="/publicprofile/${message.from.id}">${message.from.firstName} 
- 								${message.from.lastName}</a></td> 
- 						<td><img class="ui avatar image" 
- 							src="/profile/getpicture/${message.from.id}"></td> 
+ 						
+ 						 <td>${message.dateMessage}</td>
  					</tr> 
  					#{/list} 
  				</table> 
+ 				
+ 				
+ 				
 
 </section>
+
+
+
+
+<section class="inverted segment"> 
+					#{list items:conversations, as:'conversation'} 
+ 					<table class="ui table inverted segment"> 
+ 						#{list items:conversation, as:'message'} 
+ 						<tr> 
+ 							<td>${message.messageText}</td> 
+ 							<td><a href="/publicprofile/${message.from.id}">${message.from.firstName} 
+ 									${message.from.lastName}</a></td> 
+ 							<td><img class="ui avatar image" 
+ 								src="/profile/getpicture/${message.from.id}"></td> 
+ 						</tr> 
+ 						#{/list} 
+ 					</table> 
+ 					#{/list} 
+ 					
+ 					<div class="ui blue three column inverted grid segment"> 
+					<div class="ui row"> 
+ 						<div class="ui column"> 
+ 							<form action="/home/bydate"> 
+ 								<input class="ui grey button" type="submit" name="submit" 
+ 									value="By Date" /> 
+ 							</form> 
+ 						</div> 
+ 						<div class="ui column"> 
+ 							<form action="/home/index"> 
+								<input class="ui grey button" type="submit" name="submit" 
+ 									value="By User" /> 
+ 							</form> 
+ 						</div> 
+ 						<div class="ui column"> 
+ 							<form action="/home/index"> 
+ 								<input class="ui grey button" type="submit" name="submit" 
+ 									value="By Conversation" /> 
+ 							</form> 
+ 						</div> 
+ 						
+ 				</section> 

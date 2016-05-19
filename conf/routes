@@ -22,6 +22,11 @@ POST    /changeDetails				            Editdetails.changeDetails
 GET     /home                                   Home.index
 GET     /home/drop/{id}                         Home.drop
 
+GET		/home/index								Home.index 
+GET		/home/bydate							Home.byDate 
+GET		/home/index								Home.index 
+
+
 # Members page
 GET     /members                                Members.index
 GET     /members/follow/{id}                    Members.follow
@@ -32,6 +37,11 @@ GET     /profile                                Profile.index
 POST    /profile/changestatus                   Profile.changeStatus
 POST    /profile/uploadpicture/{id}             Profile.uploadPicture
 GET     /profile/getpicture/{id}                Profile.getPicture
+
+# Leaderboard page 
+GET     /leaderboard                            Leaderboard.index 
+GET    	/leaderboard/sortbyfriends              Leaderboard.sortByFriends 
+GET    	/leaderboard/sortbymessages         	Leaderboard.sortByMessages 
 
 
 # Public Profiles
