@@ -10,8 +10,8 @@ import models.*;
 @OnApplicationStart
 public class Bootstrap extends Job {
 	public void doJob() throws FileNotFoundException {
-		//Fixtures.deleteDatabase();
-		//Fixtures.loadModels("data.yml");
+		Fixtures.deleteDatabase();
+		Fixtures.loadModels("data.yml");
 
 		String photoName1 = "public/images/homer.gif";
 		Blob blob1 = new Blob();
