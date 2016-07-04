@@ -15,8 +15,8 @@ POST   /authenticate                            Accounts.authenticate
 POST   /register                                Accounts.register
 
 # Edit details
-GET		/editdetails							Editdetails.index
-POST    /changeDetails				            Editdetails.changeDetails
+GET		 /editdetails							                Editdetails.index
+POST   /changeDetails				                    Editdetails.changeDetails
 
 # Home page
 GET     /home                                   Home.index
